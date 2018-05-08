@@ -18,8 +18,11 @@ This template is created by [Ciro Artigot](http://twitter/ciroartigot) to contri
 
 2.- Features
 ---------------------------
-* ...
-
+* Posibility to use Bootstrap 4 grid, css and js
+* Posibility to use your own jQuery
+* Posibility to include or not a StyleSheet and .js
+* Posibility to insert custom code, script or css on the head and on the bottom of the page.
+* Each position can be enabled/disabled, and clean/basic/content/container options.
 
 3.- Install / Configuration
 --------------------------- 
@@ -83,6 +86,8 @@ This template is created by [Ciro Artigot](http://twitter/ciroartigot) to contri
 
 5.- Important notes
 ---------------------------
+* Using a template without using Bootstrap 3 implies to work with overrides, the Joomla Core component and module views will require to be modifiqued.
+* The same note if you are not going to use jQuery for example.
 * This extension is on beta mode, so if you are going to use it on production sites remember that is GNU licensed and no there is no warranty.
 * This template is thinked for developers.
 
