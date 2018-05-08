@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension version="3.6" type="template" method="upgrade">
-	<name>Bootla</name>
-	<creationDate>10/06/12</creationDate>
+	<name>Bootla - Aixeena SEO Template</name>
+	<creationDate>10/06/18</creationDate>
 	<author>Ciro Artigot</author>
+	<creationDate>May 2018</creationDate>
+	<copyright>Copyright (C) 2018 Ciro Artigot. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
 	<authorEmail>info@aixeena.org</authorEmail>
-	<authorUrl>http://www.aixeena.org</authorUrl>
-	<copyright>Copyright (C) 2017 Ciro Artigot</copyright>
-	<license>GNU General Public License version 2 or later</license>
-	<version>3.0.0</version>
-	<description>Bootla from Aixeena</description>
+	<authorUrl>www.aixeena.org</authorUrl>
+	<version>1.0.0</version>
+	<description>
+	<![CDATA[<div style="background-color:#f2f2f2; padding:20px; margin:20px; border-radius:10px;">
+	<p><strong>Bootla</strong> is free Joomla template to take full control of your Joomla site.</p>
+<p>Bootla is a basic template for developers, with a simple configuration gives the posibility to create big sites, with the best perfomance posible.</p>
+<p>It´s included the posibility to work with Bootstrap 4, to work with your own javascript library instead jQuery or to work without them.</p>
+<p>The template is thinked for Joomla developers who need or love to increase the perfomance of their sites.</p>
+<p>This template belongs to the Aixeena SEO collection and it´s important to work with all these extensions to make Bootla the more powerful template for Joomla ever create.</p>
+<p>This template is created by Ciro Artigot to contribute to the Joomla community.</p>
+	<div style="clear:both"></div></div>]]>
+	</description>
 	
 	<files>
 		<filename>index.php</filename>
@@ -28,11 +38,12 @@
 		<folder>jquery</folder>
     </media>
 	
+	<!--
     <updateservers>
         <server type="extension" priority="2" name="Bootla template">
 				http://aixeena.org/updates/bootla/bootla.xml
         </server>
-    </updateservers>
+    </updateservers>-->
 	
 	<positions>
 		<position>head1</position>
@@ -87,7 +98,7 @@
 		
 		<fields name="params">
 	
-			<fieldset name="Generalparams" label="Config">	
+			<fieldset name="Generalparams" label="Configuration">	
 		
 				<field name="cache" type="list" default="0" label="HTML5 cache" description="">
 					<option value="1">Enabled</option>
