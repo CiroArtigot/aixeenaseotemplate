@@ -1,0 +1,732 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.6" type="template" method="upgrade">
+	<name>Bootla</name>
+	<creationDate>10/06/12</creationDate>
+	<author>Ciro Artigot</author>
+	<authorEmail>info@aixeena.org</authorEmail>
+	<authorUrl>http://www.aixeena.org</authorUrl>
+	<copyright>Copyright (C) 2017 Ciro Artigot</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<version>3.0.0</version>
+	<description>Bootla from Aixeena</description>
+	
+	<files>
+		<filename>index.php</filename>
+		<filename>index.html</filename>
+		<filename>templateDetails.xml</filename>
+		<filename>template_thumbnail.png</filename>
+		<filename>variables.php</filename>
+		<filename>styles.php</filename>
+		<filename>scripts.php</filename>
+		<filename>functions.php</filename>
+		<folder>html</folder>
+	</files>
+	
+	<media folder="media" destination="bootla">
+        <folder>bootla</folder>
+		<folder>bootstrap4</folder>
+		<folder>jquery</folder>
+    </media>
+	
+    <updateservers>
+        <server type="extension" priority="2" name="Bootla template">
+				http://aixeena.org/updates/bootla/bootla.xml
+        </server>
+    </updateservers>
+	
+	<positions>
+		<position>head1</position>
+		<position>head2</position>
+		<position>topbar</position>
+		<position>upmenu</position>
+		<position>header</position>
+		<position>header1</position>
+		<position>header2</position>
+		<position>header3</position>
+		<position>slide</position>	
+		<position>slide-home</position>
+		<position>position1</position>	
+		<position>position2</position>	
+		<position>position3</position>	
+		<position>menu</position>
+		<position>breadcrumb</position>
+		<position>center-home</position>
+		<position>center-top</position>
+		<position>left</position>
+		<position>right</position>
+		<position>content-top</position>
+		<position>content-bottom</position>
+		<position>content-bottom-article</position>
+		<position>center-bottom</position>
+		<position>menu-bottom</position>
+		<position>position4</position>		
+		<position>position5</position>	
+		<position>position6</position>
+		<position>position7</position>	
+		<position>position8</position>	
+		<position>position9</position>	
+		<position>footer</position>
+		<position>footer2</position>
+		<position>footer3</position>		
+		<position>menu-footer</position>
+		<position>credits</position>
+		<position>last</position>	
+		<position>lastscript</position>	
+		<position>blank1</position>
+		<position>blank2</position>
+		<position>blank3</position>
+		<position>blank4</position>
+		<position>blank5</position>
+		<position>blank6</position>
+		<position>blank7</position>
+		<position>blank8</position>
+		<position>blank9</position>
+	</positions>
+	
+	<config>
+		
+		<fields name="params">
+	
+			<fieldset name="Generalparams" label="Config">	
+		
+				<field name="cache" type="list" default="0" label="HTML5 cache" description="">
+					<option value="1">Enabled</option>
+					<option value="0">Disabled</option>
+				</field>
+				
+				<field name="bootstrapcss" type="filelist" default="bootstrap.min.css" label="Bootstrap 4 CSS" description="" directory="media/bootla/bootstrap4/css/" filter="" exclude="index.html" stripext="" />
+				
+				<field name="css" type="filelist" default="template.css" label="Style Sheet" description="" directory="media/bootla/bootla/css/" filter="" exclude="index.html" stripext="" />
+				
+				<field name="jquery" type="filelist" default="jquery.js" label="jQuery .js" description="" directory="media/bootla/jquery/" filter="" exclude="index.html" stripext="" />
+				
+				<field name="bootstrapjs" type="filelist" default="bootstrap.min.js" label="Bootstrap 4 js" description="" directory="media/bootla/bootstrap4/js/" filter="" exclude="index.html" stripext="" />
+				
+				<field name="js" type="filelist" default="template.js" label="JS" description="" directory="media/bootla/bootla/js/" filter="" exclude="index.html" stripext="" />
+				
+				<field name="gwf1" type="text" default="" label="Google Web Font 1" description="For example Libre+Baskerville:400,700" />
+				
+				<field name="gwf2" type="text" default="" label="Google Web Font 2" description="For example Libre+Baskerville:400,700" />				
+				
+			</fieldset>
+			
+			<fieldset name="Zonas" label="Template zones">	
+			
+			
+				<field	
+					name="head1"
+					type="radio"
+					class="btn-group"
+					default="null"
+					label="Head code 1"
+					description="">
+					<option value="0">Disabled</option>
+					<option value="null">Clean</option>
+				</field>
+				
+				<field	
+					name="head2"
+					type="radio"
+					class="btn-group"
+					default="null"
+					label="Head code 2"
+					description="">
+					<option value="0">Disabled</option>
+					<option value="null">Clean</option>
+				</field>
+			
+				<field	
+					name="topbar"
+					type="radio"
+					class="btn-group"
+					default="null"
+					label="Top bar"
+					description="">
+					<option value="0">Disabled</option>
+					<option value="null">Clean</option>
+					<option value="basic">Basic</option>
+					<option value="content">Content</option>
+					<option value="bootla">Container</option>
+				</field>
+
+				<field	
+					name="upmenu"
+					type="radio"
+					class="btn-group"
+					default="basic"
+					label="Up menu"
+					description="">
+					<option value="0">Disabled</option>
+					<option value="null">Clean</option>
+					<option value="basic">Basic</option>
+					<option value="content">Content</option>
+					<option value="bootla">Container</option>
+				</field>
+				
+				<field	
+					name="header"
+					type="radio"
+					class="btn-group"
+					default="basic"
+					label="Header"
+					description="">
+					<option value="0">Disabled</option>
+					<option value="null">Clean</option>
+					<option value="basic">Basic</option>
+					<option value="content">Content</option>
+					<option value="bootla">Container</option>
+				</field>
+							
+				<field	
+					name="header1"
+					type="radio"
+					class="btn-group"
+					default="basic"
+					label="Header 1"
+					description="">
+					<option value="0">Disabled</option>
+					<option value="null">Clean</option>
+					<option value="basic">Basic</option>
+					<option value="content">Content</option>
+					<option value="bootla">Container</option>
+				</field>
+									
+				<field	
+					name="header2"
+					type="radio"
+					class="btn-group"
+					default="basic"
+					label="Header 2"
+					description="">
+					<option value="0">Disabled</option>
+					<option value="null">Clean</option>
+					<option value="basic">Basic</option>
+					<option value="content">Content</option>
+					<option value="bootla">Container</option>
+				</field>
+								
+				<field	
+					name="header3"
+					type="radio"
+					class="btn-group"
+					default="basic"
+					label="Header 3"
+					description="">
+					<option value="0">Disabled</option>
+					<option value="null">Clean</option>
+					<option value="basic">Basic</option>
+					<option value="content">Content</option>
+					<option value="bootla">Container</option>
+				</field>
+			
+				<field	
+					name="slides"
+					type="radio"
+					class="btn-group"
+					default="basic"
+					label="Slide"
+					description="">
+					<option value="0">Disabled</option>
+					<option value="null">Clean</option>
+					<option value="basic">Basic</option>
+					<option value="content">Content</option>
+					<option value="bootla">Container</option>
+				</field>
+				
+				<field	
+					name="slideshome"
+					type="radio"
+					class="btn-group"
+					default="basic"
+					label="Slide (Home)"
+					description="">
+					<option value="0">Disabled</option>
+					<option value="null">Clean</option>
+					<option value="basic">Basic</option>
+					<option value="content">Content</option>
+					<option value="bootla">Container</option>
+				</field>
+				
+				<field	
+					name="position1"
+					type="radio"
+					class="btn-group"
+					default="basic"
+					label="Position 1"
+					description="">
+					<option value="0">Disabled</option>
+					<option value="null">Clean</option>
+					<option value="basic">Basic</option>
+					<option value="content">Content</option>
+					<option value="bootla">Container</option>
+				</field>
+				
+				<field	
+					name="position2"
+					type="radio"
+					class="btn-group"
+					default="basic"
+					label="Position 3"
+					description="">
+					<option value="0">Disabled</option>
+					<option value="null">Clean</option>
+					<option value="basic">Basic</option>
+					<option value="content">Content</option>
+					<option value="bootla">Container</option>
+				</field>
+				
+				<field	
+					name="position3"
+					type="radio"
+					class="btn-group"
+					default="basic"
+					label="Position 3"
+					description="">
+					<option value="0">Disabled</option>
+					<option value="null">Clean</option>
+					<option value="basic">Basic</option>
+					<option value="content">Content</option>
+					<option value="bootla">Container</option>
+				</field>
+				
+				<field	
+					name="menu"
+					type="radio"
+					class="btn-group"
+					default="basic"
+					label="Menu"
+					description="">
+					<option value="0">Disabled</option>
+					<option value="null">Clean</option>
+					<option value="basic">Basic</option>
+					<option value="content">Content</option>
+					<option value="bootla">Container</option>
+				</field>
+				
+				<field	
+					name="breadcrumb"
+					type="radio"
+					class="btn-group"
+					default="bootla"
+					label="Breadcrumb"
+					description="">
+					<option value="0">Disabled</option>
+					<option value="null">Clean</option>
+					<option value="basic">Basic</option>
+					<option value="content">Content</option>
+					<option value="bootla">Container</option>
+				</field>
+					
+				<field	
+					name="center-home"
+					type="radio"
+					class="btn-group"
+					default="bootla"
+					label="Center home"
+					description="">
+					<option value="0">Disabled</option>
+					<option value="null">Clean</option>
+					<option value="basic">Basic</option>
+					<option value="content">Content</option>
+					<option value="bootla">Container</option>
+				</field>			
+				
+				<field	
+					name="center-top"
+					type="radio"
+					class="btn-group"
+					default="bootla"
+					label="Center top"
+					description="">
+					<option value="0">Disabled</option>
+					<option value="null">Clean</option>
+					<option value="basic">Basic</option>
+					<option value="content">Content</option>
+					<option value="bootla">Container</option>
+				</field>	
+				
+				
+				<field
+					name="right-span"
+					type="list"
+					default="4"
+					label="Right Bootstrap size"
+					description="">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+					<option value="10">11</option>
+					<option value="10">12</option>
+				</field>
+				
+				<field	
+					name="right"
+					type="radio"
+					class="btn-group"
+					default="content"
+					label="Right"
+					description="">
+					<option value="0">Disabled</option>
+					<option value="null">Clean</option>
+					<option value="basic">Basic</option>
+					<option value="content">Content</option>
+					<option value="bootla">Container</option>
+				</field>
+				
+				<field
+					name="left-span"
+					type="list"
+					default="3"
+					label="Left Bootstrap size"
+					description="">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+					<option value="10">11</option>
+					<option value="10">12</option>
+				</field>
+				
+				<field	
+					name="left"
+					type="radio"
+					class="btn-group"
+					default="content"
+					label="Left"
+					description="">
+					<option value="0">Disabled</option>
+					<option value="null">Clean</option>
+					<option value="basic">Basic</option>
+					<option value="content">Content</option>
+					<option value="bootla">Container</option>
+				</field>
+				
+				<field	
+					name="content-top"
+					type="radio"
+					class="btn-group"
+					default="content"
+					label="Content top"
+					description="">
+					<option value="0">Disabled</option>
+					<option value="null">Clean</option>
+					<option value="basic">Basic</option>
+					<option value="content">Content</option>
+					<option value="bootla">Container</option>
+				</field>	
+				
+				<field	
+					name="content-bottom"
+					type="radio"
+					class="btn-group"
+					default="content"
+					label="Content bottom"
+					description="">
+					<option value="0">Disabled</option>
+					<option value="null">Clean</option>
+					<option value="basic">Basic</option>
+					<option value="content">Content</option>
+					<option value="bootla">Container</option>
+				</field>		
+				
+				<field	
+					name="content-bottom-article"
+					type="radio"
+					class="btn-group"
+					default="content"
+					label="Content bottom in article"
+					description="">
+					<option value="0">Disabled</option>
+					<option value="null">Clean</option>
+					<option value="basic">Basic</option>
+					<option value="content">Content</option>
+					<option value="bootla">Container</option>
+				</field>		
+				
+				<field	
+					name="center-bottom"
+					type="radio"
+					class="btn-group"
+					default="bootla"
+					label="Center bottom"
+					description="">
+					<option value="0">Disabled</option>
+					<option value="null">Clean</option>
+					<option value="basic">Basic</option>
+					<option value="content">Content</option>
+					<option value="bootla">Container</option>
+				</field>
+				
+
+				<field	
+					name="menu-bottom"
+					type="radio"
+					class="btn-group"
+					default="basic"
+					label="Bottom menu"
+					description="">
+					<option value="0">Disabled</option>
+					<option value="null">Clean</option>
+					<option value="basic">Basic</option>
+					<option value="content">Content</option>
+					<option value="bootla">Container</option>
+				</field>
+
+				<field	
+					name="position4"
+					type="radio"
+					class="btn-group"
+					default="basic"
+					label="Position 4"
+					description="">
+					<option value="0">Disabled</option>
+					<option value="null">Clean</option>
+					<option value="basic">Basic</option>
+					<option value="content">Content</option>
+					<option value="bootla">Container</option>
+				</field>
+				
+				<field	
+					name="position5"
+					type="radio"
+					class="btn-group"
+					default="basic"
+					label="Position 5"
+					description="">
+					<option value="0">Disabled</option>
+					<option value="null">Clean</option>
+					<option value="basic">Basic</option>
+					<option value="content">Content</option>
+					<option value="bootla">Container</option>
+				</field>
+				
+				<field	
+					name="position6"
+					type="radio"
+					class="btn-group"
+					default="basic"
+					label="Position 6"
+					description="">
+					<option value="0">Disabled</option>
+					<option value="null">Clean</option>
+					<option value="basic">Basic</option>
+					<option value="content">Content</option>
+					<option value="bootla">Container</option>
+				</field>
+				
+				<field	
+					name="position7"
+					type="radio"
+					class="btn-group"
+					default="basic"
+					label="Position 7"
+					description="">
+					<option value="0">Disabled</option>
+					<option value="null">Clean</option>
+					<option value="basic">Basic</option>
+					<option value="content">Content</option>
+					<option value="bootla">Container</option>
+				</field>
+				
+				<field	
+					name="position8"
+					type="radio"
+					class="btn-group"
+					default="basic"
+					label="Position 8"
+					description="">
+					<option value="0">Disabled</option>
+					<option value="null">Clean</option>
+					<option value="basic">Basic</option>
+					<option value="content">Content</option>
+					<option value="bootla">Container</option>
+				</field>
+				
+				<field	
+					name="position9"
+					type="radio"
+					class="btn-group"
+					default="basic"
+					label="Position 9"
+					description="">
+					<option value="0">Disabled</option>
+					<option value="null">Clean</option>
+					<option value="basic">Basic</option>
+					<option value="content">Content</option>
+					<option value="bootla">Container</option>
+				</field>
+				
+				<field	
+					name="footer"
+					type="radio"
+					class="btn-group"
+					default="basic"
+					label="Footer"
+					description="">
+					<option value="0">Disabled</option>
+					<option value="null">Clean</option>
+					<option value="basic">Basic</option>
+					<option value="content">Content</option>
+					<option value="bootla">Container</option>
+				</field>
+				
+				<field	
+					name="footer1"
+					type="radio"
+					class="btn-group"
+					default="basic"
+					label="Footer 1"
+					description="">
+					<option value="0">Disabled</option>
+					<option value="null">Clean</option>
+					<option value="basic">Basic</option>
+					<option value="content">Content</option>
+					<option value="bootla">Container</option>
+				</field>
+				
+				<field	
+					name="footer2m"
+					type="radio"
+					class="btn-group"
+					default="basic"
+					label="Footer 2"
+					description="">
+					<option value="0">Disabled</option>
+					<option value="null">Clean</option>
+					<option value="basic">Basic</option>
+					<option value="content">Content</option>
+					<option value="bootla">Container</option>
+				</field>
+	
+				<field	
+					name="footer3"
+					type="radio"
+					class="btn-group"
+					default="basic"
+					label="Footer 3"
+					description="">
+					<option value="0">Disabled</option>
+					<option value="null">Clean</option>
+					<option value="basic">Basic</option>
+					<option value="content">Content</option>
+					<option value="bootla">Container</option>
+				</field>
+				
+				<field	
+					name="credits"
+					type="radio"
+					class="btn-group"
+					default="basic"
+					label="Credits"
+					description="">
+					<option value="0">Disabled</option>
+					<option value="null">Clean</option>
+					<option value="basic">Basic</option>
+					<option value="content">Content</option>
+					<option value="bootla">Container</option>
+				</field>
+				
+				<field	
+					name="menu-footer"
+					type="radio"
+					class="btn-group"
+					default="basic"
+					label="Menú footer"
+					description="">
+					<option value="0">Disabled</option>
+					<option value="null">Clean</option>
+					<option value="basic">Basic</option>
+					<option value="content">Content</option>
+					<option value="bootla">Container</option>
+				</field>
+				
+				<field	
+					name="last"
+					type="radio"
+					class="btn-group"
+					default="basic"
+					label="Last"
+					description="">
+					<option value="0">Disabled</option>
+					<option value="null">Clean</option>
+					<option value="basic">Basic</option>
+					<option value="content">Content</option>
+					<option value="bootla">Container</option>
+				</field>
+				
+				<field	
+					name="lastscript"
+					type="radio"
+					class="btn-group"
+					default="null"
+					label="Last script"
+					description="">
+					<option value="0">Disabled</option>
+					<option value="null">Clean</option>
+					<option value="basic">Basic</option>
+					<option value="content">Content</option>
+					<option value="bootla">Container</option>
+				</field>	 			
+			
+			</fieldset>
+			
+			<fieldset name="codes" label="Custom codes">	
+			
+				<field
+					name="customcss"
+					type="textarea"
+					default=""
+					label="Head custom CSS"
+					description=""
+					rows="8"
+					cols="40" filter="raw"
+					/>
+					
+				<field
+					name="customcode"
+					type="textarea"
+					default=""
+					label="Head custom code"
+					description=""
+					rows="8"
+					cols="40" filter="raw"
+					/>
+					
+				<field
+					name="customhtml"
+					type="textarea"
+					default=""
+					label="Body-end custom code"
+					description=""
+					rows="8"
+					cols="40" filter="raw"
+					/>
+					
+				<field
+					name="customjs"
+					type="textarea"
+					default=""
+					label="Body-end custom JS code"
+					description=""
+					rows="8"
+					cols="40" filter="raw"
+					/>
+			
+			</fieldset>
+
+		</fields>
+	</config>	
+</extension>

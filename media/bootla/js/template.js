@@ -1,0 +1,4 @@
+
+
+//Scroll to top
+jQuery(document).ready(function(b){var c=300,e=1200,a=700,d=b(".cd-top");b(window).scroll(function(){(b(this).scrollTop()>c)?d.addClass("cd-is-visible"):d.removeClass("cd-is-visible cd-fade-out");if(b(this).scrollTop()>e){d.addClass("cd-fade-out")}});d.on("click",function(f){f.preventDefault();b("body,html").animate({scrollTop:0},a)});b(function(){b('a[href*="#"]:not([href="#"])').click(function(){if(location.pathname.replace(/^\//,"")==this.pathname.replace(/^\//,"")&&location.hostname==this.hostname){var f=b(this.hash);f=f.length?f:b("[name="+this.hash.slice(1)+"]");if(f.length){b("html, body").animate({scrollTop:(f.offset().top)-175},1000);return false}}})})});
