@@ -31,7 +31,54 @@ This template is created by [Ciro Artigot](http://twitter/ciroartigot) to contri
 ---------------------------
 
 ```bash
-xxx
+<positions>
+		<position>head1</position>
+		<position>head2</position>
+		<position>topbar</position>
+		<position>upmenu</position>
+		<position>header</position>
+		<position>header1</position>
+		<position>header2</position>
+		<position>header3</position>
+		<position>slide</position>	
+		<position>slide-home</position>
+		<position>position1</position>	
+		<position>position2</position>	
+		<position>position3</position>	
+		<position>menu</position>
+		<position>breadcrumb</position>
+		<position>center-home</position>
+		<position>center-top</position>
+		<position>left</position>
+		<position>right</position>
+		<position>content-top</position>
+		<position>content-bottom</position>
+		<position>content-bottom-article</position>
+		<position>center-bottom</position>
+		<position>menu-bottom</position>
+		<position>position4</position>		
+		<position>position5</position>	
+		<position>position6</position>
+		<position>position7</position>	
+		<position>position8</position>	
+		<position>position9</position>	
+		<position>footer</position>
+		<position>footer2</position>
+		<position>footer3</position>		
+		<position>menu-footer</position>
+		<position>credits</position>
+		<position>last</position>	
+		<position>lastscript</position>	
+		<position>blank1</position>
+		<position>blank2</position>
+		<position>blank3</position>
+		<position>blank4</position>
+		<position>blank5</position>
+		<position>blank6</position>
+		<position>blank7</position>
+		<position>blank8</position>
+		<position>blank9</position>
+	</positions>
 ```
 
 5.- Important notes
